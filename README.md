@@ -161,7 +161,7 @@ O projeto está otimizado para deploy na Vercel com:
 
 **Alcino Luvualo**  
 - GitHub: [@alcino-luvualo](https://github.com/alcino-luvualo)
-- Email: [Alcinoluvualo@gmail.com]
+- Email: Alcinoluvualo@gmail.com
 
 ## 📄 Licença
 
