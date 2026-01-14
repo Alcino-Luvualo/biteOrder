@@ -1,172 +1,172 @@
-# 🍔 BiteOrder - Sistema de Gestão de Pedidos
+# 🍔 BiteOrder - Order Management System
 
-O **BiteOrder** é uma aplicação web moderna desenvolvida para gestão inteligente de pedidos em restaurantes, utilizando algoritmos de fila FIFO e LIFO para otimizar o atendimento.
+**BiteOrder** is a modern web application developed for intelligent order management in restaurants, using FIFO and LIFO queue algorithms to optimize service.
 
-## 🚀 Tecnologias Utilizadas
+## 🚀 Technologies Used
 
-- **React 19** - Framework para interfaces de usuário
-- **React Router Dom 7.8** - Roteamento client-side
-- **Vite** - Build tool e dev server
-- **Firebase** - Backend as a Service (autenticação e Firestore)
-- **Framer Motion** - Animações suaves
-- **CSS3** - Estilização responsiva e moderna
+- **React 19** - Framework for user interfaces
+- **React Router Dom 7.8** - Client-side routing
+- **Vite** - Build tool and dev server
+- **Firebase** - Backend as a Service (authentication and Firestore)
+- **Framer Motion** - Smooth animations
+- **CSS3** - Responsive and modern styling
 
-## ✨ Funcionalidades Principais
+## ✨ Main Features
 
-### 🔐 Sistema de Autenticação
-- Login com email/senha
-- Integração com Google OAuth
-- Registro de novos usuários
-- Proteção de rotas autenticadas
+### 🔐 Authentication System
+- Login with email/password
+- Google OAuth integration
+- New user registration
+- Protected authenticated routes
 
-### 📋 Gestão de Pedidos
-- **Fila FIFO** - Pedidos comuns (primeiro a chegar, primeiro a ser servido)
-- **Fila LIFO** - Pedidos expressos (último a chegar, primeiro a ser servido)
-- Atualizações em tempo real via Firestore
-- Notificações sonoras para novos pedidos
-- Contadores dinâmicos de pedidos
+### 📋 Order Management
+- **FIFO Queue** - Regular orders (first in, first out)
+- **LIFO Queue** - Express orders (last in, first out)
+- Real-time updates via Firestore
+- Sound notifications for new orders
+- Dynamic order counters
 
-### 🎨 Interface Moderna
-- Design responsivo para todas as telas
-- Navegação fluida com React Router
-- Animações com Framer Motion
-- Páginas 404 personalizadas
-- Feedback visual de carregamento
+### 🎨 Modern Interface
+- Responsive design for all screens
+- Smooth navigation with React Router
+- Animations with Framer Motion
+- Custom 404 pages
+- Visual loading feedback
 
-## 🔧 Correções Implementadas
+## 🔧 Implemented Fixes
 
-### React Router Otimizado
-- ✅ Substituição de tags `<a>` por `<Link>` em todas as páginas
-- ✅ Navegação sem recarregamento da página
-- ✅ Estado da aplicação preservado durante navegação
-- ✅ Rota 404 para páginas não encontradas
-- ✅ Configuração `vercel.json` para deploy SPA
+### Optimized React Router
+- ✅ Replacement of `<a>` tags with `<Link>` on all pages
+- ✅ Navigation without page reload
+- ✅ Application state preserved during navigation
+- ✅ 404 route for pages not found
+- ✅ `vercel.json` configuration for SPA deployment
 
-### Problemas Corrigidos
-- ❌ **Antes**: Links causavam refresh completo da página
-- ✅ **Depois**: Navegação instantânea client-side
-- ❌ **Antes**: Erro 404 em rotas diretas na Vercel  
-- ✅ **Depois**: Todas as rotas funcionam perfeitamente
-- ❌ **Antes**: Perda de estado durante navegação
-- ✅ **Depois**: Estado preservado entre páginas
+### Fixed Issues
+- ❌ **Before**: Links caused complete page refresh
+- ✅ **After**: Instant client-side navigation
+- ❌ **Before**: 404 error on direct routes in Vercel
+- ✅ **After**: All routes work perfectly
+- ❌ **Before**: State loss during navigation
+- ✅ **After**: State preserved between pages
 
-## 📁 Estrutura do Projeto
+## 📁 Project Structure
 
 ```
 biteOrder/
 ├── src/
-│   ├── components/          # Componentes reutilizáveis
-│   │   └── Navigation.jsx   # Menu de navegação
-│   ├── pages/              # Páginas da aplicação
-│   │   ├── home.jsx        # Página inicial
-│   │   ├── login.jsx       # Autenticação
-│   │   ├── register.jsx    # Registro
-│   │   ├── dashboard.jsx   # Painel principal
-│   │   ├── sobre.jsx       # Sobre o sistema
-│   │   ├── contactos.jsx   # Página de contato
-│   │   └── NotFound.jsx    # Página 404
-│   ├── firebase/           # Configuração Firebase
-│   ├── styles/             # Arquivos CSS
-│   └── App.jsx             # Componente raiz
-├── public/                 # Arquivos públicos
-├── vercel.json            # Configuração Vercel
-└── package.json           # Dependências
+│   ├── components/          # Reusable components
+│   │   └── Navigation.jsx   # Navigation menu
+│   ├── pages/              # Application pages
+│   │   ├── home.jsx        # Home page
+│   │   ├── login.jsx       # Authentication
+│   │   ├── register.jsx    # Registration
+│   │   ├── dashboard.jsx   # Main dashboard
+│   │   ├── sobre.jsx       # About page
+│   │   ├── contactos.jsx   # Contact page
+│   │   └── NotFound.jsx    # 404 page
+│   ├── firebase/           # Firebase configuration
+│   ├── styles/             # CSS files
+│   └── App.jsx             # Root component
+├── public/                 # Public files
+├── vercel.json            # Vercel configuration
+└── package.json           # Dependencies
 ```
 
-## 🚀 Como Executar
+## 🚀 How to Run
 
-### Pré-requisitos
+### Prerequisites
 - Node.js 16+
-- npm ou yarn
+- npm or yarn
 
-### Instalação
+### Installation
 ```bash
-# Clonar o repositório
-git clone [url-do-repo]
+# Clone the repository
+git clone [repo-url]
 cd biteOrder
 
-# Instalar dependências
+# Install dependencies
 npm install
 
-# Executar em desenvolvimento
+# Run in development mode
 npm run dev
 
-# Build para produção
+# Build for production
 npm run build
 ```
 
-### Configuração Firebase
-1. Crie um projeto no Firebase Console
-2. Configure Authentication (Email/Password e Google)
-3. Crie um banco Firestore
-4. Copie as credenciais para `src/firebase/config.js`
+### Firebase Configuration
+1. Create a project in Firebase Console
+2. Configure Authentication (Email/Password and Google)
+3. Create a Firestore database
+4. Copy credentials to `src/firebase/config.js`
 
-## 🌐 Deploy na Vercel
+## 🌐 Vercel Deployment
 
-O projeto está otimizado para deploy na Vercel com:
-- Arquivo `vercel.json` configurado para SPAs
-- Redirecionamento automático de todas as rotas para `index.html`
-- Headers de segurança configurados
-- Suporte completo ao React Router
+The project is optimized for Vercel deployment with:
+- Configured `vercel.json` file for SPAs
+- Automatic redirection of all routes to `index.html`
+- Configured security headers
+- Full React Router support
 
-### Passos do Deploy:
-1. Conecte o repositório à Vercel
-2. As configurações são detectadas automaticamente
-3. Todas as rotas funcionarão perfeitamente após o deploy
+### Deployment Steps:
+1. Connect the repository to Vercel
+2. Settings are automatically detected
+3. All routes will work perfectly after deployment
 
-## 🔄 Algoritmos de Fila
+## 🔄 Queue Algorithms
 
-### FIFO (First In, First Out) - Pedidos Comuns
-- Pedidos são processados na ordem de chegada
-- Garante justiça no atendimento
-- Ideal para operação normal do restaurante
+### FIFO (First In, First Out) - Regular Orders
+- Orders are processed in order of arrival
+- Ensures fair service
+- Ideal for normal restaurant operation
 
-### LIFO (Last In, First Out) - Pedidos Expressos  
-- Último pedido tem prioridade máxima
-- Para situações urgentes
-- Atendimento imediato quando necessário
+### LIFO (Last In, First Out) - Express Orders
+- Last order has maximum priority
+- For urgent situations
+- Immediate service when needed
 
-## 🎯 Melhorias Técnicas
+## 🎯 Technical Improvements
 
-- **Performance**: Lazy loading e otimizações de bundle
-- **SEO**: Meta tags e estrutura semântica
-- **Acessibilidade**: Labels, ARIA e navegação por teclado
-- **Segurança**: Validação client/server e headers de segurança
-- **UX**: Feedback visual, estados de loading e animações
+- **Performance**: Lazy loading and bundle optimizations
+- **SEO**: Meta tags and semantic structure
+- **Accessibility**: Labels, ARIA, and keyboard navigation
+- **Security**: Client/server validation and security headers
+- **UX**: Visual feedback, loading states, and animations
 
-## 📱 Responsividade
+## 📱 Responsiveness
 
-- **Mobile First**: Otimizado para dispositivos móveis
-- **Tablet**: Interface adaptada para telas médias
-- **Desktop**: Aproveitamento completo de telas grandes
-- **Touch**: Gestos e interações tácteis
+- **Mobile First**: Optimized for mobile devices
+- **Tablet**: Interface adapted for medium screens
+- **Desktop**: Full use of large screens
+- **Touch**: Gestures and tactile interactions
 
-## 🐛 Debug e Logs
+## 🐛 Debug and Logs
 
-- Console limpo sem erros
-- Tratamento adequado de exceções  
-- Feedback claro para o usuário
-- Logs estruturados para desenvolvimento
+- Clean console without errors
+- Proper exception handling
+- Clear feedback for users
+- Structured logs for development
 
-## 🏆 Resultados
+## 🏆 Results
 
-✅ **100%** das rotas funcionando na Vercel  
-✅ **0** erros de linting  
-✅ **Build** bem-sucedido  
-✅ **Navegação** fluida sem recarregamentos  
-✅ **Estado** preservado entre páginas  
-✅ **Performance** otimizada  
+✅ **100%** of routes working on Vercel
+✅ **0** linting errors
+✅ Successful **build**
+✅ Smooth **navigation** without reloads
+✅ **State** preserved between pages
+✅ Optimized **performance**
 
-## 👨‍💻 Desenvolvedor
+## 👨‍💻 Developer
 
-**Alcino Luvualo**  
+**Alcino Luvualo**
 - GitHub: [@alcino-luvualo](https://github.com/alcino-luvualo)
 - Email: Alcinoluvualo@gmail.com
 
-## 📄 Licença
+## 📄 License
 
-Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+This project is under the MIT license. See the [LICENSE](LICENSE) file for more details.
 
 ---
 
-*Projeto desenvolvido com ❤️ para demonstrar boas práticas de React e arquitetura frontend moderna.*
+*Project developed with ❤️ to demonstrate React best practices and modern frontend architecture.*
